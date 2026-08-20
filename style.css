@@ -1,0 +1,319 @@
+/* ===== MULTISERVICIOS APOLO BCN ===== */
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --rojo:#E4002B;
+  --rojo-oscuro:#B30022;
+  --verde:#25D366;
+  --verde-oscuro:#1DA851;
+  --azul:#12305E;
+  --gris-claro:#F4F6F8;
+  --gris:#6b7280;
+  --borde:#e5e7eb;
+  --blanco:#ffffff;
+  --texto:#1f2937;
+  --radio:12px;
+  --sombra:0 6px 20px rgba(18,48,94,.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--texto);line-height:1.6;background:var(--blanco)}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{width:100%;max-width:1140px;margin:0 auto;padding:0 20px}
+section{padding:64px 0}
+
+/* ===== HEADER ===== */
+.topbar{background:var(--azul);color:#fff;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;align-items:center;padding-top:8px;padding-bottom:8px;flex-wrap:wrap;gap:6px}
+.topbar a{color:#fff}
+.topbar .topbar-tel{font-weight:bold;font-size:18px}
+header{position:sticky;top:0;z-index:100;background:var(--blanco);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{height:84px;width:auto;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.18);background:#fff}
+.logo-movil{display:none}
+nav ul{display:flex;gap:26px}
+nav a{font-weight:600;font-size:15px;color:var(--texto);transition:color .2s}
+nav a:hover{color:var(--rojo)}
+.header-cta{display:flex;align-items:center;gap:12px}
+.btn-llamar{background:var(--rojo);color:#fff;font-weight:bold;padding:10px 18px;border-radius:50px;display:inline-flex;align-items:center;gap:8px;transition:background .2s}
+.btn-llamar:hover{background:var(--rojo-oscuro)}
+.nav-toggle{display:none;background:none;border:0;font-size:26px;cursor:pointer;color:var(--azul)}
+
+/* ===== HERO ===== */
+.hero{position:relative;background:var(--azul);color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;object-fit:cover;width:100%;height:100%;opacity:.38}
+.hero-inner{position:relative;z-index:2;padding:90px 0;max-width:720px}
+.hero h1{font-size:44px;line-height:1.15;margin-bottom:16px}
+.hero h1 span{color:#FFD700}
+.hero p{font-size:18px;margin-bottom:24px;opacity:.95}
+.hero-badges{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:50px;font-size:14px}
+.hero-buttons{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:bold;padding:14px 26px;border-radius:50px;font-size:18px;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-rojo{background:var(--rojo);color:#fff}
+.btn-rojo:hover{background:var(--rojo-oscuro)}
+.btn-whatsapp{background:var(--verde);color:#fff}
+.btn-whatsapp:hover{background:var(--verde-oscuro)}
+.btn-blanco{background:#fff;color:var(--azul)}
+.btn-blanco:hover{background:#eef2f7}
+
+/* ===== TITULOS ===== */
+.seccion-titulo{text-align:center;max-width:700px;margin:0 auto 40px}
+.seccion-titulo .etiqueta{display:inline-block;background:rgba(228,0,43,.1);color:var(--rojo);font-weight:bold;font-size:13px;letter-spacing:1px;padding:6px 14px;border-radius:50px;margin-bottom:14px}
+.seccion-titulo h2{font-size:34px;color:var(--azul);line-height:1.2;margin-bottom:12px}
+.seccion-titulo p{color:var(--gris);font-size:16px}
+
+/* ===== HERO ESTILO HOMESERVE ===== */
+.hero-he{background:#fff;padding:56px 0 40px}
+.hero-he-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.hero-he h1{font-size:48px;line-height:1.12;color:var(--azul);margin-bottom:16px}
+.hero-he h1 span{color:var(--rojo)}
+.hero-he p{font-size:18px;color:var(--gris);max-width:540px;margin-bottom:24px}
+.hero-he .hero-badges{margin-bottom:26px}
+.hero-he .badge{background:var(--gris-claro);border:1px solid var(--borde);color:var(--azul)}
+.hero-he-foto img{border-radius:16px;box-shadow:var(--sombra);width:100%;height:auto;object-fit:cover}
+@media(max-width:992px){
+  .hero-he-grid{grid-template-columns:1fr;gap:28px}
+  .hero-he h1{font-size:34px}
+  .hero-he p{font-size:16px}
+  .hero-he{padding:40px 0 30px}
+}
+@media(max-width:480px){
+  .hero-he h1{font-size:28px}
+}
+
+/* ===== BLOG ===== */
+.grid-blog{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card-blog{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--sombra);transition:transform .2s,box-shadow .2s}
+.card-blog:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.15)}
+.card-blog img{width:100%;height:190px;object-fit:cover;display:block}
+.card-blog .card-blog-cuerpo{padding:18px 18px 20px;display:flex;flex-direction:column;flex:1}
+.card-blog .card-blog-categoria{font-size:12px;font-weight:bold;letter-spacing:.5px;text-transform:uppercase;color:var(--rojo);margin-bottom:8px}
+.card-blog h3{font-size:18px;color:var(--azul);margin-bottom:8px;line-height:1.3}
+.card-blog p{font-size:14px;color:var(--gris);margin-bottom:14px;flex:1}
+.card-blog .servicio-link{color:var(--rojo);font-weight:600;font-size:14px}
+.pagina-articulo{padding:40px 0 56px}
+.pagina-articulo .articulo-cabecera{max-width:820px;margin:0 auto 26px;text-align:center}
+.pagina-articulo .articulo-cabecera .card-blog-categoria{font-size:13px}
+.pagina-articulo h1{font-size:40px;color:var(--azul);line-height:1.15;margin:10px 0}
+.pagina-articulo .articulo-meta{color:var(--gris);font-size:14px}
+.articulo{max-width:820px;margin:0 auto}
+.articulo img.articulo-img{width:100%;border-radius:var(--radio);box-shadow:var(--sombra);margin:0 0 24px}
+.articulo h2{font-size:28px;color:var(--azul);margin:34px 0 14px;line-height:1.2}
+.articulo h3{font-size:20px;color:var(--azul);margin:26px 0 10px}
+.articulo p{font-size:17px;color:var(--texto);line-height:1.7;margin-bottom:16px}
+.articulo ul{font-size:17px;color:var(--texto);line-height:1.7;margin:0 0 18px;padding-left:24px}
+.articulo li{margin-bottom:8px}
+.articulo .recuadro{background:var(--gris-claro);border-left:4px solid var(--rojo);border-radius:8px;padding:18px 20px;margin:22px 0}
+.articulo .recuadro p{margin:0}
+.articulo .resalta{color:var(--rojo);font-weight:bold}
+.articulo .cta-final{background:linear-gradient(160deg,#122a55,#0e1f3d);color:#fff;border-radius:var(--radio);padding:30px;text-align:center;margin-top:36px}
+.articulo .cta-final h3{color:#fff;margin-bottom:10px}
+.articulo .cta-final p{color:#c7d0e0;margin-bottom:18px}
+@media(max-width:992px){.grid-blog{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){
+  .grid-blog{grid-template-columns:1fr}
+  .pagina-articulo h1{font-size:30px}
+  .articulo h2{font-size:24px}
+}
+
+/* ===== DESTACADOS FONTANERO / ELECTRICISTA ===== */
+.destacados{background:linear-gradient(160deg,#122a55,#0e1f3d);padding:56px 0}
+.destacados .seccion-titulo h2{color:#fff}
+.destacados .seccion-titulo p{color:#c7d0e0}
+.grid-destacados{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.card-destacado{position:relative;border-radius:var(--radio);overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.4);background:#000}
+.card-destacado img{width:100%;height:430px;object-fit:cover;display:block;transition:transform .45s}
+.card-destacado:hover img{transform:scale(1.06)}
+.destacado-info{position:absolute;inset:auto 0 0 0;padding:90px 26px 24px;background:linear-gradient(transparent,rgba(0,0,0,.85));text-align:left}
+.destacado-tag{display:inline-block;background:var(--rojo);color:#fff;font-weight:bold;font-size:13px;letter-spacing:.5px;padding:5px 13px;border-radius:50px;margin-bottom:10px}
+.card-destacado h3{font-size:46px;font-weight:900;letter-spacing:2px;line-height:1;margin-bottom:8px;text-transform:uppercase;color:#ff3b52;text-shadow:0 3px 14px rgba(0,0,0,.55)}
+.card-destacado h3 a{color:inherit}
+.card-destacado p{color:#fff;font-size:15px;max-width:430px;margin-bottom:18px;text-shadow:0 1px 6px rgba(0,0,0,.6)}
+.destacado-info .hero-buttons{display:flex;gap:10px;flex-wrap:wrap}
+.destacado-info .btn{padding:12px 20px;font-size:16px}
+@media(max-width:992px){
+  .grid-destacados{grid-template-columns:1fr;gap:20px}
+  .card-destacado img{height:340px}
+  .card-destacado h3{font-size:36px}
+  .destacados{padding:40px 0}
+}
+@media(max-width:480px){
+  .card-destacado h3{font-size:30px}
+}
+
+/* ===== SERVICIOS (tarjetas) ===== */
+.servicios{background:var(--gris-claro)}
+.grid-servicios{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px}
+.card-servicio{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:26px 22px;text-align:center;transition:box-shadow .2s,transform .2s}
+.card-servicio:hover{box-shadow:var(--sombra);transform:translateY(-4px)}
+.card-servicio .icono{width:64px;height:64px;margin:0 auto 16px;background:var(--gris-claro);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--rojo)}
+.card-servicio h3{font-size:17px;color:var(--azul);margin-bottom:8px}
+.card-servicio p{font-size:14px;color:var(--gris)}
+.card-servicio .servicio-link{display:inline-block;margin-top:12px;color:var(--rojo);font-weight:600;font-size:14px}
+.card-servicio .servicio-link:hover{text-decoration:underline}
+
+/* ===== EMERGENCIA ===== */
+.emergencia{background:var(--rojo);color:#fff}
+.emergencia .container{display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.emergencia h2{font-size:32px;margin-bottom:10px}
+.emergencia p{font-size:16px;opacity:.95;max-width:560px}
+.emergencia ul{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.emergencia li{background:rgba(255,255,255,.16);padding:8px 16px;border-radius:50px;font-size:14px;font-weight:600}
+.emergencia .btn-blanco{background:#fff;color:var(--rojo)}
+
+/* ===== COMO FUNCIONA ===== */
+.grid-pasos{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;text-align:center}
+.paso .num{width:56px;height:56px;margin:0 auto 16px;background:var(--rojo);color:#fff;font-size:24px;font-weight:bold;border-radius:50%;display:flex;align-items:center;justify-content:center}
+.paso h3{font-size:19px;color:var(--azul);margin-bottom:10px}
+.paso p{color:var(--gris);font-size:15px}
+
+/* ===== REFORMAS GALERIA ===== */
+.reformas{background:var(--gris-claro)}
+.grid-reformas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card-foto{border-radius:var(--radio);overflow:hidden;position:relative;aspect-ratio:4/3;box-shadow:var(--sombra)}
+.card-foto img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.card-foto:hover img{transform:scale(1.06)}
+.card-foto .leyenda{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,rgba(0,0,0,.75));color:#fff;padding:26px 16px 12px;font-weight:bold;font-size:15px}
+.card-foto .leyenda small{display:block;font-weight:normal;font-size:13px;margin-top:3px;opacity:.9}
+
+/* ===== ZONAS ===== */
+.grid-zonas{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.zonas .card-zona{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:16px;transition:box-shadow .2s,border-color .2s}
+.zonas .card-zona:hover{box-shadow:var(--sombra);border-color:var(--rojo)}
+.zonas .card-zona .pin{color:var(--rojo);flex-shrink:0}
+.zonas .card-zona strong{color:var(--azul);font-size:15px}
+.zonas .card-zona span{display:block;color:var(--gris);font-size:13px}
+
+/* ===== OPINIONES ===== */
+.opiniones{background:var(--azul);color:#fff}
+.opiniones .seccion-titulo h2{color:#fff}
+.opiniones .seccion-titulo p{color:#c7d0e0}
+.rating-grande{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:34px;flex-wrap:wrap}
+.rating-grande .nota{font-size:56px;font-weight:bold;color:#FFD700}
+.rating-grande .estrellas{font-size:28px;color:#FFD700}
+.rating-grande small{color:#c7d0e0}
+.grid-opiniones{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.carta-opinion{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:var(--radio);padding:24px}
+.carta-opinion .estrellas{color:#FFD700;margin-bottom:12px}
+.carta-opinion p{font-size:14px;margin-bottom:14px}
+.carta-opinion .autor{font-weight:bold;font-size:14px;color:#FFD700}
+.carta-opinion .servicio{font-size:12px;color:#c7d0e0}
+
+/* ===== CONTACTO ===== */
+.grid-contacto{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.formulario{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:30px;box-shadow:var(--sombra)}
+.formulario h3{font-size:22px;color:var(--azul);margin-bottom:18px}
+.form-grupo{margin-bottom:16px}
+.form-grupo label{display:block;font-weight:600;font-size:14px;margin-bottom:6px;color:var(--azul)}
+.form-grupo input,.form-grupo textarea{width:100%;padding:12px 14px;border:1px solid var(--borde);border-radius:8px;font-size:15px;font-family:inherit}
+.form-grupo input:focus,.form-grupo textarea:focus{outline:2px solid var(--rojo);border-color:transparent}
+.btn-enviar{width:100%;background:var(--rojo);color:#fff;font-weight:bold;padding:14px;border:0;border-radius:8px;font-size:16px;cursor:pointer}
+.btn-enviar:hover{background:var(--rojo-oscuro)}
+.form-nota{font-size:13px;color:var(--gris);margin-top:12px;text-align:center}
+.form-nota a{color:var(--rojo);font-weight:600}
+.contacto-info{display:flex;flex-direction:column;gap:18px}
+.contacto-tarjeta{background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:22px;display:flex;gap:16px;align-items:flex-start;box-shadow:var(--sombra)}
+.contacto-tarjeta .icono{flex-shrink:0;width:48px;height:48px;background:var(--gris-claro);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--rojo)}
+.contacto-tarjeta h4{color:var(--azul);font-size:16px;margin-bottom:4px}
+.contacto-tarjeta p{color:var(--gris);font-size:14px}
+.contacto-tarjeta a[href^="tel:"]{font-size:24px;font-weight:bold;color:var(--rojo)}
+.contacto-tarjeta a[href^="https://wa.me"]{font-size:17px;font-weight:bold;color:var(--verde)}
+.contacto-tarjeta a{color:var(--rojo);font-weight:bold}
+
+/* ===== FOOTER ===== */
+footer{background:#0e1f3d;color:#c7d0e0;padding:48px 0 0;font-size:14px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;padding-bottom:34px}
+footer h4{color:#fff;font-size:16px;margin-bottom:14px}
+footer a[href^="tel:"]{font-size:20px;font-weight:bold;color:#fff}
+footer a{color:#c7d0e0}
+footer a:hover{color:#fff}
+footer li{margin-bottom:8px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;text-align:center;font-size:13px}
+.footer-logo img{height:72px;margin-bottom:12px}
+
+/* ===== WHATSAPP FLOTANTE ===== */
+.whatsapp-flotante{position:fixed;right:20px;bottom:20px;background:var(--verde);color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.45);z-index:200;transition:transform .2s}
+.whatsapp-flotante:hover{transform:scale(1.08)}
+.whatsapp-flotante svg{width:32px;height:32px}
+
+/* ===== BREADCRUMB (zonas) ===== */
+.breadcrumb{background:var(--gris-claro);padding:14px 0;font-size:14px;color:var(--gris)}
+.breadcrumb a{color:var(--rojo);font-weight:600}
+.pagina-zona h1{color:var(--azul);font-size:38px;line-height:1.2;margin-bottom:14px}
+.pagina-zona .subtitulo{color:var(--gris);font-size:17px;max-width:760px;margin-bottom:30px}
+.grid-servicios-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.servicio-linea{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--borde);border-radius:var(--radio);padding:16px}
+.servicio-linea .check{color:var(--rojo);flex-shrink:0}
+.servicio-linea strong{color:var(--azul)}
+.cta-zona{background:var(--rojo);color:#fff;border-radius:var(--radio);padding:34px;text-align:center}
+.cta-zona h3{font-size:26px;margin-bottom:10px}
+.cta-zona p{margin-bottom:20px;opacity:.95}
+.lista-zonas-otras{display:flex;flex-wrap:wrap;gap:10px}
+.lista-zonas-otras a{background:var(--gris-claro);border:1px solid var(--borde);padding:8px 16px;border-radius:50px;font-size:14px;font-weight:600;color:var(--azul)}
+.lista-zonas-otras a:hover{background:var(--rojo);color:#fff;border-color:var(--rojo)}
+
+/* ===== PORTAFOLIO ===== */
+.grid-portafolio{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid-fotos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+
+/* ===== BARRA FIJA MOVIL (llamar / whatsapp) ===== */
+.barra-movil{display:none}
+@media(max-width:768px){
+  .barra-movil{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:250;box-shadow:0 -4px 16px rgba(0,0,0,.18)}
+  .barra-movil a{display:flex;align-items:center;justify-content:center;gap:8px;padding:15px 10px;font-weight:bold;font-size:18px;color:#fff}
+  .barra-movil .bm-llamar{background:var(--rojo)}
+  .barra-movil .bm-whatsapp{background:var(--verde)}
+  body{padding-bottom:54px}
+  .whatsapp-flotante{bottom:78px;right:14px;width:54px;height:54px}
+  .whatsapp-flotante svg{width:28px;height:28px}
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:992px){
+  .grid-servicios{grid-template-columns:repeat(2,1fr)}
+  .grid-reformas{grid-template-columns:repeat(2,1fr)}
+  .grid-opiniones{grid-template-columns:repeat(2,1fr)}
+  .grid-zonas{grid-template-columns:repeat(2,1fr)}
+  .grid-contacto{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .grid-portafolio{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:768px){
+  .logo-escritorio{display:none}
+  .logo-movil{display:block}
+  nav{position:fixed;top:0;right:-280px;width:280px;height:100vh;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,.15);transition:right .3s;z-index:300;padding:80px 24px}
+  nav.abierto{right:0}
+  nav ul{flex-direction:column;gap:20px}
+  .nav-toggle{display:block}
+  .header-cta .btn-llamar span{display:none}
+  .topbar .container{justify-content:center}
+  .topbar span{display:none}
+  .hero h1{font-size:30px}
+  .hero p{font-size:16px}
+  .hero-inner{padding:56px 0}
+  .hero-buttons .btn{flex:1 1 auto;justify-content:center}
+  .grid-servicios,.grid-reformas,.grid-opiniones,.grid-zonas,.grid-portafolio,.grid-servicios-2{grid-template-columns:1fr}
+  .grid-pasos{grid-template-columns:1fr}
+  .seccion-titulo h2{font-size:26px}
+  .seccion-titulo p{font-size:15px}
+  section{padding:44px 0}
+  .footer-grid{grid-template-columns:1fr}
+  .emergencia h2{font-size:24px}
+  .emergencia .container{flex-direction:column;text-align:center}
+  .emergencia ul{justify-content:center}
+  .rating-grande .nota{font-size:44px}
+  .formulario{padding:22px}
+  .grid-contacto{gap:24px}
+  .logo img{height:62px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:26px}
+  .hero-inner{padding:44px 0}
+  .badge{font-size:12px;padding:6px 10px}
+  .card-servicio{padding:20px 16px}
+  .cta-zona{padding:26px 18px}
+  .cta-zona h3{font-size:21px}
+}
